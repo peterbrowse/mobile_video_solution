@@ -1,0 +1,20 @@
+{
+	"author": "Peter Browse <peterbrowse@gmail.com>",
+	"name": "interactive-video-concept",
+	"description": "A HTML5 video concept focused on iOS and in particular iPad.",
+	"version": "0.0.1",
+	"config": {
+		"port": "8080"
+	},
+	"scripts": {
+		"start": "node server.js"
+	},
+	"dependencies": {
+		"express": "3.x"
+	},
+	"engines": {
+		"node": "0.8.x",
+		"npm": "1.1.65"
+	},
+	"subdomain": "interactive-video-concept"
+}
