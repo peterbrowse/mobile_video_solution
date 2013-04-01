@@ -1,9 +1,41 @@
 <!DOCTYPE html>  
 <html>
 	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" />
+		
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+		<!--<script type="text/javascript" src="js/plugins/backbone.js"></script>-->
+		<script type="text/javascript" src="js/plugins/modernizr.custom.js"></script>
+		<script type="text/javascript" src="js/plugins/PxLoader.js"></script>
+		<script type="text/javascript" src="js/plugins/PxLoaderImage.js"></script>
+		<script type="text/javascript" src="js/plugins/PxLoaderVideo.js"></script>
+		<script type="text/javascript" src="js/plugins/jquery.hammer.js"></script>
+		<script type="text/javascript" src="js/plugins/popcorn-complete.js"></script>
+		<script type="text/javascript" src="js/videoManager.js"></script>
+		
+		<link type="text/css" href="css/base-reset.css" rel="stylesheet" />
+		<link type="text/css" href="css/main.css" rel="stylesheet" />
 		<title>iPad Video</title>
 	</head>
 	<body>
-		<h1>Hello world from index.html</h1>
+		<div class="preloader">
+			<div class="preloader-inner">
+				<div class="quality-button">High Quality</div>
+				<div class="quality-button">Low Quality</div>
+				<div class="loading-message">Loading</div>
+			</div>
+		</div>
+		<div class="main">
+			<div class="trigger"></div>
+  			<div class="container">
+    			<canvas id="fillCanvas" width="100%" height="100%"></canvas>
+    			<video id="featureVideo" width="100%" height="100%" preload="none">
+          			<source src="" type="video/mp4">
+    			</video>
+  			</div>
+  		</div>
 	</body>
 </html>

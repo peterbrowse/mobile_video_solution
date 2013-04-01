@@ -5,7 +5,7 @@ var	blue  	= '\033[34m',
 	yellow 	= '\033[33m',
 	reset 	= '\033[0m';
 
-console.log(blue+'# Video Demo App Starting #');
+console.log(blue+'Video Demo App Starting');
 
 var express = require('express')
 ,	http 	= require('http')
@@ -23,6 +23,11 @@ app.configure('production', function(){
   app.use(express.errorHandler());
 });
 
-server.listen(8080);
-console.log(green+'info: '+reset+'Express server started on ip '+yellow+'%s'+reset+' port '+yellow+'%s'+reset+'.', server.address().address, server.address().port);
-console.log(green+'info: '+reset+'App running in '+yellow+process.env.NODE_ENV+reset+' mode');
+server.listen(process.env.PORT || 8080, function (err) {
+  if (err) {
+    throw err;
+  }
+
+  console.log(green+'info: '+reset+'Express server started on '+yellow+'%s:'+yellow+'%s'+reset+'.', server.address().address, server.address().port);
+  console.log(green+'info: '+reset+'App running in '+yellow+process.env.NODE_ENV+reset+' mode.');
+});
