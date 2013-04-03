@@ -5,9 +5,7 @@ var videoContinue = false;
 var ended = false;
 
 var videoObj
-,	timeStore
-,	touchStartTime
-,	touchStartDistance;
+,	timeStore;
 
 $(window).load(function(){
 	$('#featureVideo').hide();
@@ -20,6 +18,7 @@ $(window).load(function(){
 	
 	videoObj.cue(7, function() {
    		this.pause();
+   		
    		/*timeStore = this.currentTime();
    		$('.trigger').hammer({
 			drag_lock_to_axis: true
@@ -39,7 +38,7 @@ $(window).load(function(){
 				drag_lock_to_axis: true
 			}).on('dragleft', function(event) {
 				var travel = event.gesture.deltaX/500; 
-				if((jumpTo-travel) > jumpTo && (jumpTo-travel) < 11.5) {
+				if((jumpTo-travel) > jumpTo && (jumpTo-travel) < 12) {
 					videoObj.currentTime(jumpTo - travel);
 				}
 			});
@@ -65,12 +64,12 @@ $(window).load(function(){
    			videoObj.play();
    			$('.trigger').hammer().off('dragleft');
    			$('.trigger').hammer().off('dragright');
+   			$('.trigger').hammer().off('release');
    		})
    	});
    	
    	videoObj.cue(11.6, function() {
    		this.pause();
-   		this.destroy();
    	});
 });
 

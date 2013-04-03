@@ -2,7 +2,7 @@
 	"author": "Peter Browse <peterbrowse@gmail.com>",
 	"name": "interactive-video-concept",
 	"description": "A HTML5 video concept focused on iOS and in particular iPad.",
-	"version": "0.0.1-7",
+	"version": "0.0.1-8",
 	"config": {
 		"port": "8080"
 	},
