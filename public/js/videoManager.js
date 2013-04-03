@@ -70,7 +70,7 @@ $(window).load(function(){
    	
    	videoObj.cue(11.6, function() {
    		this.pause();
-   		this.currentTime(this.duration());
+   		this.destroy();
    	});
 });
 
