@@ -1,5 +1,5 @@
-var videoLow = ['http://d3bqgljfodso0e.cloudfront.net/test/big_buck_bunny.mp4'];
-var videoHigh = ['http://d3bqgljfodso0e.cloudfront.net/test/big_buck_bunny.mp4'];
+var videoLow = ['http://d3bqgljfodso0e.cloudfront.net/test/Test3.mp4'];
+var videoHigh = ['http://d3bqgljfodso0e.cloudfront.net/test/Test.mp4'];
 
 var videoContinue = false;
 var ended = false;
@@ -18,7 +18,7 @@ $(window).load(function(){
 		ended = true;
 	});
 	
-	videoObj.cue(5, function() {
+	videoObj.cue(7, function() {
    		this.pause();
    		/*timeStore = this.currentTime();
    		$('.trigger').hammer({
@@ -32,14 +32,14 @@ $(window).load(function(){
    		$('.trigger').hammer({
 			drag_lock_to_axis: true
 		}).on('dragleft', function(event) {
-			var jumpTo = 5;
+			var jumpTo = 8;
 			videoObj.currentTime(jumpTo);
 			$('.trigger').hammer().off('dragleft');
 			$('.trigger').hammer({
 				drag_lock_to_axis: true
 			}).on('dragleft', function(event) {
-				var travel = event.gesture.deltaX/100; 
-				if((jumpTo-travel) > jumpTo && (jumpTo-travel) < 10) {
+				var travel = event.gesture.deltaX/500; 
+				if((jumpTo-travel) > jumpTo && (jumpTo-travel) < 11.5) {
 					videoObj.currentTime(jumpTo - travel);
 				}
 			});
@@ -48,14 +48,14 @@ $(window).load(function(){
    		$('.trigger').hammer({
 			drag_lock_to_axis: true
 		}).on('dragright', function(event) {
-			var jumpTo = 18;
+			var jumpTo = 12;
 			videoObj.currentTime(jumpTo);
 			$('.trigger').hammer().off('dragright');
 			$('.trigger').hammer({
 				drag_lock_to_axis: true
 			}).on('dragright', function(event) {
-				var travel = event.gesture.deltaX/100; 
-				if((jumpTo+travel) > jumpTo && (jumpTo+travel) < jumpTo + 5) {
+				var travel = event.gesture.deltaX/500; 
+				if((jumpTo+travel) > jumpTo && (jumpTo+travel) < jumpTo + 4) {
 					videoObj.currentTime(jumpTo + travel);
 				}
    			});
@@ -66,10 +66,10 @@ $(window).load(function(){
    			$('.trigger').hammer().off('dragleft');
    			$('.trigger').hammer().off('dragright');
    		})
-   		
-   		videoObj.cue(17, function() {
-   			this.currentTime(30);
-   		});
+   	});
+   	
+   	videoObj.cue(11.6, function() {
+   		this.pause();
    	});
 });
 
