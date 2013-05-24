@@ -23,6 +23,11 @@ app.configure('production', function(){
   app.use(express.errorHandler());
 });
 
+app.get("/public/assets.appcache", function(req, res){
+  res.header("Content-Type", "text/cache-manifest");
+  res.end("CACHE MANIFEST");
+});
+
 server.listen(process.env.PORT || 8080, function (err) {
   if (err) {
     throw err;

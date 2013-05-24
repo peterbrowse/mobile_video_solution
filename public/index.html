@@ -1,9 +1,12 @@
 <!DOCTYPE html>  
+<html manifest="assets.appcache">
 <html>
 	<head>
 		<meta charset="utf-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 		
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 		<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
@@ -13,18 +16,23 @@
 		<script type="text/javascript" src="js/plugins/PxLoaderImage.js"></script>
 		<script type="text/javascript" src="js/plugins/PxLoaderVideo.js"></script>
 		<script type="text/javascript" src="js/plugins/jquery.hammer.js"></script>
-		<script type="text/javascript" src="js/plugins/popcorn-complete.js"></script>
+		<script type="text/javascript" src="js/plugins/popcorn-complete.min.js"></script>
 		<script type="text/javascript" src="js/videoManager.js"></script>
 		
+		
+		<link rel="shortcut icon" type="image/x-icon" href="images/favico.ico" />
+		<link rel="shortcut icon" href="images/favico.ico" />
+		<link rel="icon" type="image/x-icon" href="images/favico.ico" />
+		<link rel="apple-touch-icon" href="/images/appicon.png"/>
 		<link type="text/css" href="css/base-reset.css" rel="stylesheet" />
 		<link type="text/css" href="css/main.css" rel="stylesheet" />
-		<title>iPad Video</title>
+		<title>Video Demo</title>
 	</head>
 	<body>
 		<div class="preloader">
 			<div class="preloader-inner">
-				<div class="quality-button">High Quality</div>
-				<div class="quality-button">Low Quality</div>
+				<div class="quality-button" rel="Low">Play</div>
+				<div class="quality-button" id="restart" rel="restart">Restart</div>
 				<div class="loading-message">Loading</div>
 			</div>
 		</div>
@@ -32,7 +40,7 @@
 			<div class="trigger"></div>
   			<div class="container">
     			<canvas id="fillCanvas" width="100%" height="100%"></canvas>
-    			<video id="featureVideo" width="100%" height="100%" preload="none">
+    			<video id="featureVideo" preload="none" scale="true">
           			<source src="" type="video/mp4">
     			</video>
   			</div>

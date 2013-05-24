@@ -1,0 +1,26 @@
+CACHE MANIFEST
+# This is a comment.
+# Cache manifest version 0.0.14
+# If you change the version number in this comment,
+# the cache manifest is no longer byte-for-byte
+# identical.
+
+CACHE:
+index.html
+http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
+http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js
+js/plugins/jquery.hammer.js
+js/plugins/popcorn-complete.min.js
+js/plugins/modernizr.custom.js
+js/plugins/PxLoader.js
+js/plugins/PxLoaderImage.js
+js/plugins/PxLoaderVideo.js
+js/videoManager.js
+http://d3bqgljfodso0e.cloudfront.net/test/Test3.mp4
+css/base-reset.css
+css/main.css
+images/appicon.png
+images/favico.ico
+
+NETWORK:
+http://fonts.googleapis.com/css?family=Ubuntu:300,400,700

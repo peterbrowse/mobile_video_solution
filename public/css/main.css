@@ -53,6 +53,10 @@ body {
 		cursor: pointer;
 	}
 	
+		#restart {
+			display: none;
+		}
+	
 	.loading-message {
 		font-size: 30px;
 		text-transform: uppercase;
@@ -85,10 +89,13 @@ video, canvas {
     height: 100%;
 }
 
-video {
+#featureVideo {
 	z-index: 1;
-    height: 100%;
-    position: absolute;
+   	top: 0px;
+   	bottom: 0px;
+   	left: 0px;
+   	right: 0px;
+    position: fixed;
 }
 
 .trigger {
@@ -98,4 +105,5 @@ video {
   	bottom: 0;
   	left: 0;
   	right: 0;
+  	cursor: move;
 }
